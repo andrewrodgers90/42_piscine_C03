@@ -12,8 +12,6 @@
 
 #include <unistd.h>
 
-int	ft_strcmp(char *s1, char *s2);
-
 int	ft_strcmp(char *s1, char *s2)
 {
 	while (*s1 == *s2 && *s1 != '\0')
@@ -23,24 +21,3 @@ int	ft_strcmp(char *s1, char *s2)
 	}
 	return (*s1 - *s2);
 }
-/*
-int	main(void)
-{
-	char	*string_1 = "ABBA";
-	char	*string_2 = "ABBA";
-	int	i;
-	int	j;
-	int	ireal;
-	int	jreal;
-
-	i = ft_strcmp(string_1, string_2);
-	j = ft_strcmp(string_2, string_1);
-	ireal = strcmp(string_1, string_2);
-	jreal = strcmp(string_2, string_1);
-	printf("string_1 - string_2: %d\n", i);
-	printf("string_2 - string_1: %d\n", j);
-	printf("string_1 - string_2: %d\n", ireal);
-	printf("string_2 - string_1: %d\n", jreal);
-	return (0);
-}
-*/
