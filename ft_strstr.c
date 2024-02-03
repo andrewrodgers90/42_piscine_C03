@@ -11,10 +11,6 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <string.h>
-#include <stdio.h>
-
-char	*ft_strstr(char *str, char *to_find);
 
 char	*ft_strstr(char *str, char *to_find)
 {
@@ -23,9 +19,7 @@ char	*ft_strstr(char *str, char *to_find)
 
 	i = 0;
 	if (to_find[0] == '\0')
-	{
 		return (str);
-	}
 	while (str[i] != '\0')
 	{
 		j = 0;
@@ -42,16 +36,3 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	return (0);
 }
-
-int	main(void)
-{
-	char	haystack[40] = "";
-	char	needle[4] = "needle";
-
-	char	*found = ft_strstr(haystack, needle);
-	char	*strstr_found = strstr(haystack, needle);
-	printf("ft_strstr: %s\n", found);
-	printf("strstr: %s\n", strstr_found);
-	return (0);
-}
-
