@@ -12,19 +12,13 @@
 
 #include <unistd.h>
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
-
-unsigned int	ft_strlen(char *str);
-
 unsigned int	ft_strlen(char *str)
 {
 	unsigned int	i;
 
 	i = 0;
 	while (str[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }
 
@@ -52,23 +46,4 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		return (size + len_src);
 	dest[i + j] = '\0';
 	return (len_dest + len_src);
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char	s1[28] = "test";
-	char	*s2 = "test";
-	char	s3[28] = "test";
-	char	*s4 = "test";
-
-	printf("%d\n", ft_strlcat(s1, s2, 8));
-	printf("%lu\n", strlcat(s3, s4, 8));
-	ft_strlcat(s1, s2, 8);
-	printf("%s\n", s1);
-	strlcat(s3, s4, 8);
-	printf("%s\n", s3);
-	return (0);
 }
